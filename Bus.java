@@ -7,8 +7,6 @@ public class Bus implements Network {
         createModel();
     }
 
-
-
     @Override
     public void createModel() {
         network = new Vertex[numberOfVertices];
@@ -29,7 +27,7 @@ public class Bus implements Network {
             }
 
         }
-        throw new RuntimeException("Could not find vertex" + destinationName);
+        throw new VertexNotFoundException("Could not find vertex" + destinationName);
     }
 
     @Override
